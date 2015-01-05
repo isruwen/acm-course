@@ -1,3 +1,6 @@
+/*
+* Date:
+*/
 #include <stdio.h>
 #include "math.h"
 int main( )
@@ -5,21 +8,21 @@ int main( )
 	int nCases, i;
 	scanf("%d", &nCases);
 	for(i = 0; i < nCases; i++){
-		char begin[5], end[5]; /*ÓÃbegin ºÍend ·Ö±ð´æ´¢Æå×ÓµÄÆðÖ¹Î»ÖÃ¡£*/
+		char begin[5], end[5]; /*ç”¨begin å’Œend åˆ†åˆ«å­˜å‚¨æ£‹å­çš„èµ·æ­¢ä½ç½®ã€‚*/
 		scanf("%s %s", begin, end);
 	
-		int x, y; /*ÓÃx ºÍy ·Ö±ð´æ´¢ÆðÖ¹Î»ÖÃÖ®¼äx ·½ÏòºÍy ·½ÏòÉÏµÄ¾àÀë¡£*/
+		int x, y; /*ç”¨x å’Œy åˆ†åˆ«å­˜å‚¨èµ·æ­¢ä½ç½®ä¹‹é—´x æ–¹å‘å’Œy æ–¹å‘ä¸Šçš„è·ç¦»ã€‚*/
 		x = abs(begin[0] - end[0]);
 		y = abs(begin[1] - end[1]);
-		if(x == 0 && y == 0) printf("0 0 0 0\n"); /*ÆðÖ¹Î»ÖÃÏàÍ¬£¬ËùÓÐÆå×Ó¶¼×ß0 ²½¡£*/
+		if(x == 0 && y == 0) printf("0 0 0 0\n"); /*èµ·æ­¢ä½ç½®ç›¸åŒï¼Œæ‰€æœ‰æ£‹å­éƒ½èµ°0 æ­¥ã€‚*/
 		else{
-			if(x < y) printf("%d", y); /*ÍõµÄ²½Êý */
+			if(x < y) printf("%d", y); /*çŽ‹çš„æ­¥æ•° */
 			else printf("%d", x);
-			if(x == y || x == 0 || y == 0) printf(" 1");/* ºóµÄ²½Êý*/
+			if(x == y || x == 0 || y == 0) printf(" 1");/* åŽçš„æ­¥æ•°*/
 			else printf(" 2");
-			if(x == 0 || y == 0) printf(" 1"); /*³µµÄ²½Êý */
+			if(x == 0 || y == 0) printf(" 1"); /*è½¦çš„æ­¥æ•° */
 			else printf(" 2");
-			if(abs(x - y) % 2 != 0) printf(" Inf\n"); /* ÏóµÄ²½Êý */
+			if(abs(x - y) % 2 != 0) printf(" Inf\n"); /* è±¡çš„æ­¥æ•° */
 			else if(x == y) printf(" 1\n");
 			else printf(" 2\n");
 		}
